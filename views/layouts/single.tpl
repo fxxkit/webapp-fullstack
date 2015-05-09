@@ -1,5 +1,5 @@
 <html>
-    {{>head}}
+    {{> head }}
     <body>
         <div class="container">
             <div class="row">
@@ -7,6 +7,8 @@
                     {{{ body }}}
                 </div>
             </div>
+            {{> footer }}
         </div>
     </body>
+    {{> scripts }}
 </html>
