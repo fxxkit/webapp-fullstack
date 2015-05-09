@@ -6,7 +6,8 @@
   "dependencies": {
     "consolidate": "^0.12.1",
     "express": "^4.12.3",
-    "lodash": "^3.8.0"
+    "lodash": "^3.8.0",
+    "lodash-express": "0.0.2"
   },
   "devDependencies": {},
   "scripts": {
