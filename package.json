@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "consolidate": "^0.12.1",
     "express": "^4.12.3",
-    "mustache-express": "^1.2.1"
+    "lodash": "^3.8.0"
   },
   "devDependencies": {},
   "scripts": {

@@ -1,12 +1,12 @@
-var express = require('express');
-var mustacheExpress = require('mustache-express');
+var express = require('express'),
+    app = express(),
+    _ = require('lodash')._,
+    cons = require('consolidate');
 
-var app = express();
+// Register '.tpl' extension with lodash templating
+app.engine('tpl', cons.lodash);
 
-// Register '.must' extension with The Mustache Express
-app.engine('must', mustacheExpress());
-
-app.set('view engine', 'must');
+app.set('view engine', 'tpl');
 app.set('views', __dirname + '/templates');
 
 app.get('/', function (req, res) {
@@ -16,14 +16,18 @@ app.get('/', function (req, res) {
 // datamodel
 var data = {
     simple: {
-        name: 'Maxis'
+        name: 'kerker'
     }
 };
 
 console.log(data.simple);
 
 app.get('/simple', function (req, res) {
-    res.render('simple',data.simple );
+    res.render('simple', data.simple );
+});
+
+app.get('/greeting', function (req, res) {
+    res.render('index', req.query)
 });
 
 var server = app.listen(3000, function() {
