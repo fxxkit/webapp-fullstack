@@ -4,13 +4,13 @@
 
 ```sh
 npm install && bower install
-npm start
+gulp serve
 ```
 
 or specify debug level and port
 
 ```sh
-DEBUG=* PORT=3000 npm start
+DEBUG=* PORT=3000 gulp serve
 ```
 
 Access the following link:

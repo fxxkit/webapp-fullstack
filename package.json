@@ -6,13 +6,15 @@
     "bower": "^1.4.1",
     "consolidate": "^0.12.1",
     "express": "^4.12.3",
-    "express-handlebars": "^2.0.1"
+    "express-handlebars": "^2.0.1",
+    "gulp": "^3.8.11"
   },
   "devDependencies": {
-    "debug": "^2.1.3"
+    "debug": "^2.1.3",
+    "gulp": "^3.8.11"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "gulp serve:dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
