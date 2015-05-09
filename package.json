@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "bower": "^1.4.1",
     "consolidate": "^0.12.1",
     "express": "^4.12.3",
     "express-handlebars": "^2.0.1"
