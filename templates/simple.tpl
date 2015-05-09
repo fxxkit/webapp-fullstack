@@ -1,2 +1,0 @@
-
-<h1>Hi my name is <%= name %>!</h1>

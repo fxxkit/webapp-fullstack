@@ -1,35 +1,26 @@
 var express = require('express'),
-    app = express();
+    path = require('path'),
+    exphbs = require('express-handlebars');
 
-// Register '.tpl' extension with lodash templating
-require('lodash-express')(app, 'tpl');
-app.set('view engine', 'tpl');
 
-// set the template root to /templates (default: /views)
-app.set('views', __dirname + '/templates');
+var app = express();
 
-app.get('/', function (req, res) {
-    res.render('base');
-});
+// view engine setup
+app.engine('.hbs', exphbs({defaultLayout: 'single', extname: '.hbs'}));
 
-// datamodel
-var data = {
-    simple: {
-        name: 'kerker'
-    }
-};
+// set the template root to /views
+app.set('views', path.join(__dirname, 'views'));
+//app.set('views', __dirname + '/templates');
 
-app.get('/simple', function (req, res) {
-    res.render('simple', data.simple );
+app.set('view engine', '.hbs');
+
+
+app.get('/', function (req, res, next) {
+    res.render('index');
 });
 
 app.get('/greeting', function (req, res) {
-    res.render('index', req.query)
+    res.render('greeting', req.query)
 });
 
-
-var server = app.listen(3000, function() {
-    console.log('listening at localhost:3000');
-});
-
-
+module.exports = app;
