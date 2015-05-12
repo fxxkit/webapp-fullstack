@@ -4,16 +4,17 @@
 
 ```sh
 $ npm install && bower install
-$ gem update --system && install compass
-$ gulp serve
 ```
-
-or specify debug level and port
 
 ```sh
-DEBUG=* PORT=3000 gulp serve
+# install compass
+$ gem update --system && gem install compass
 ```
 
-Access the following link:
+```sh
+$ gulp serve
 
-http://localhost:3000/greeting?name=kerker
+# or specify debug level
+$ DEBUG=* gulp serve
+```
+
