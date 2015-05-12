@@ -3,8 +3,9 @@
 ## Quick Start
 
 ```sh
-npm install && bower install
-gulp serve
+$ npm install && bower install
+$ gem update --system && install compass
+$ gulp serve
 ```
 
 or specify debug level and port
