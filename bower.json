@@ -1,5 +1,5 @@
 {
-  "name": "redtuna",
+  "name": "webapp-fullstack",
   "private": true,
   "dependencies": {
     "bootstrap": "~3.3.4",
